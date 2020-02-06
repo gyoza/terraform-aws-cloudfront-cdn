@@ -49,10 +49,6 @@ resource aws_cloudfront_distribution default {
     prefix          = var.log_prefix
   }
 
-  lifecycle {
-    ignore_changes = [ origin ]  
-  }
-
   aliases = var.aliases
 
   dynamic "custom_error_response" {
