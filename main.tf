@@ -50,7 +50,7 @@ resource aws_cloudfront_distribution default {
   }
 
   lifecycle {
-    ignore_changes = [ "origin" ]  
+    ignore_changes = [ "${origin}" ]  
   }
 
   aliases = var.aliases
